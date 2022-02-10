@@ -18,8 +18,7 @@
             'complete'    => false
         ], "tasks");
 
-        header("Location: /"); // redirect to index
-        
+        redirect("/"); // redirect to index
     }
 
     /**

@@ -27,6 +27,14 @@
     }
 
     /**
+     * redirect request uri
+     * @param {string} $uri
+     */
+    function redirect($uri){
+        header("Location: $uri");
+    }
+
+    /**
      * sql dbl connection 
      * return PDO database connection
      */
