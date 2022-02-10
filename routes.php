@@ -16,8 +16,16 @@
 // $router->get("contact" , "controllers/ContactController.php");
 // $router->post("names" , "controllers/add-name.php");
 
-$router->get("" , "TaskController@index");
-$router->get("about" , "TaskController@about");
-$router->get("order" , "TaskController@order");
-$router->get("contact" , "TaskController@contact");
-$router->post("add-task" , "TaskController@addTask");
+// $router->get("" , "TaskController@index");
+// $router->get("about" , "TaskController@about");
+// $router->get("order" , "TaskController@order");
+// $router->get("contact" , "TaskController@contact");
+// $router->post("add-task" , "TaskController@addTask");
+
+use controllers\TaskController;
+
+$router->get('', [TaskController::class, 'index']);
+$router->get('about', [TaskController::class, 'about']);
+$router->get('order', [TaskController::class, 'order']);
+$router->get('contact', [TaskController::class, 'contact']);
+$router->post('add-task', [TaskController::class, 'addTask']);

@@ -58,7 +58,7 @@ class Router{
           split uri as array
           eg. UserController@index => [UserController, index]
         */
-        $explosion = explode("@", $this->routes[$method][$uri]);
+        $explosion = $this->routes[$method][$uri];
         $this->callControllerMethod($explosion[0], $explosion[1]);
     }
 
