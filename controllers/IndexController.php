@@ -1,3 +1,3 @@
 <?php
-    $tasks = $query->selectAll("tasks");
+    $tasks = App::get('database')->selectAll("tasks");
     view("index", ["tasks" => $tasks]);

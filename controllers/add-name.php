@@ -1,5 +1,5 @@
 <?php
-    $query->insert([
+    App::get('database')->insert([
         'description' => $_POST['name'],
         'complete'    => false
     ], "tasks");
