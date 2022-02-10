@@ -1,4 +1,6 @@
 <?php
+use core\App;
+
 require 'core/function.php';
 // $config = require "config.php";
 // require 'core/Router.php';

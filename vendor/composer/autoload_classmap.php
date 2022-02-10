@@ -6,7 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'App' => $baseDir . '/core/App.php',
     'ComposerAutoloaderInitee822f4506fafc8721b6dd1ea8aae21a' => $vendorDir . '/composer/autoload_real.php',
     'Composer\\Autoload\\ClassLoader' => $vendorDir . '/composer/ClassLoader.php',
     'Composer\\Autoload\\ComposerStaticInitee822f4506fafc8721b6dd1ea8aae21a' => $vendorDir . '/composer/autoload_static.php',
@@ -16,4 +15,5 @@ return array(
     'Request' => $baseDir . '/core/Request.php',
     'Router' => $baseDir . '/core/Router.php',
     'TaskController' => $baseDir . '/controllers/TaskController.php',
+    'core\\App' => $baseDir . '/core/App.php',
 );
