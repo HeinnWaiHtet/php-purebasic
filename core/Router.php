@@ -50,9 +50,25 @@ class Router{
      * $method = request uri method(get or post)
      */
     public function direct($uri, $method) {
-        if(array_key_exists($uri, $this->routes[$method])){
-            return $this->routes[$method][$uri];
+        if(!array_key_exists($uri, $this->routes[$method])){
+            die("404 page");
         }
-        die("404 page");
+
+        /*
+          split uri as array
+          eg. UserController@index => [UserController, index]
+        */
+        $explosion = explode("@", $this->routes[$method][$uri]);
+        $this->callControllerMethod($explosion[0], $explosion[1]);
+    }
+
+    /**
+     * go to controller method by request uri
+     * @param {string} $class
+     * @param {string} $method
+     */
+    private function callControllerMethod($class, $method){
+        $class = new $class;
+        $class->$method();
     }
 }

@@ -11,7 +11,7 @@
     <?php endforeach; ?>
 
     <h1>Submit your Tasks</h1>
-    <form action="/names" method="POST">
+    <form action="/add-task" method="POST">
         <input type="text" name="name">
         <input type="submit" value="submit">
     </form>
