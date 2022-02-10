@@ -14,7 +14,7 @@
      */
     public function addTask(){
         App::get('database')->insert([
-            'description' => $_POST['name'],
+            'description' => request('name'),
             'complete'    => false
         ], "tasks");
 

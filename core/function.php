@@ -56,4 +56,18 @@
         $statement->execute();
         return $statement->fetchAll(PDO::FETCH_OBJ);
     }
+
+    /**
+     * return request data value by request name after check request method
+     * @param {string} $name
+     */
+    function request($name){
+        if($_SERVER['REQUEST_METHOD'] === 'POST'){
+            return $_POST[$name];
+        }
+
+        if($_SERVER['REQUEST_METHOD'] === 'GET'){
+            return $_GET[$name];
+        }
+    }
 ?>
