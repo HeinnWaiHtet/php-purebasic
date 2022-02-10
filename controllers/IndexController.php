@@ -1,3 +1,3 @@
 <?php
-$tasks = $query->selectAll("tasks");
-require 'views/index.view.php';
+    $tasks = $query->selectAll("tasks");
+    view("index", ["tasks" => $tasks]);

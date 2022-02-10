@@ -10,6 +10,23 @@
     }
 
     /**
+     * go to view with data or not
+     * @param {string} $name
+     * @param {array} $data
+     * eg $name = "index", "contact", etc
+     * eg $data = ["usersData" => $userModel]
+     */
+    function view($name, $data = []){
+        /*
+          change send data to desire format
+          eg ["userData" => $user] 
+          change model data $user to userData in view
+        */
+        extract($data);
+        return require "views/$name.view.php";
+    }
+
+    /**
      * sql dbl connection 
      * return PDO database connection
      */

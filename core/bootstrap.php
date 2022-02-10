@@ -1,6 +1,6 @@
 <?php
 $config = require "config.php";
-// require 'core/function.php';
+require 'core/function.php';
 // require 'core/Router.php';
 // require 'core/Request.php';
 // require 'core/databases/connection.php';
