@@ -1,3 +1,7 @@
 <?php
-echo "<pre>";
-var_dump($_SERVER);
+    $query->insert([
+        'description' => $_POST['name'],
+        'complete'    => false
+    ], "tasks");
+
+    header("Location: /"); // redirect to index
