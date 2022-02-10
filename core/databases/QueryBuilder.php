@@ -5,6 +5,12 @@ class QueryBuilder{
         $this->pdo = $pdo;
     }
 
+    /**
+     * get table data by desire table
+     * @param {string} $table
+     * $table = request table name
+     * return table select data
+     */
     public function selectAll($table){
         $statement = $this->pdo->prepare("select * from $table");
         $statement->execute();
